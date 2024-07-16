@@ -3,7 +3,7 @@ import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const ProductCard = ({ item }) => {
+const ProductCard = ({ item,setCoffees,coffees }) => {
     const { _id, name, chef, price, photo } = item
     const handleDelete = id => {
         Swal.fire({
@@ -29,6 +29,8 @@ const ProductCard = ({ item }) => {
                                 text: "Deleted Successfully",
                                 icon: "success"
                             });
+                            const remaining=coffees.filter(coffee=>coffee._id!==_id)
+                            setCoffees(remaining)
                         }
                     })
             }
@@ -39,7 +41,7 @@ const ProductCard = ({ item }) => {
             <figure>
                 <img
                     src={photo}
-                    alt="Movie" />
+                    alt="Movie" className="transition-transform duration-500 ease-in-out transform hover:scale-110" />
             </figure>
             <div className="flex justify-between gap-4 items-center">
                 <div>

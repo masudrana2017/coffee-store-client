@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import ProductCard from "../Card/ProductCard";
 
-const PopularProduct = ({ coffees }) => {
+const PopularProduct = ({ coffees,setCoffees}) => {
     const coffee = coffees;
-    console.log(coffee.length)
     if(coffee.length<1){
         return <div><h2 className="text-center text-2xl mt-4 mb-4">No Data Avaiable</h2></div>
     }
@@ -20,7 +19,7 @@ const PopularProduct = ({ coffees }) => {
                 </div>
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                    {
-                    coffee.map(item=><ProductCard key={item.id} item={item}></ProductCard>)
+                    coffee.map(item=><ProductCard key={item._id} item={item} setCoffees={setCoffees} coffees={coffees}></ProductCard>)
                    }
                 </div>
             </div>
