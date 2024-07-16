@@ -44,9 +44,9 @@ const UpdateCoffee = () => {
     }
     return (
         <div>
-            <div className="hero bg-base-200 min-h-screen">
+            <div className="hero min-h-screen bg-[url('/src/assets/images/more/11.png')]">
                 <div className="hero-content">
-                    <div className="card">
+                    <div className="card bg-slate-100">
                         <div className="text-center p-6">
                             <h1 className="flex flex-col items-center justify-center">
                                 <img src="/src/assets/images/icons/UpdateExistingCoffeeDetails.png" alt="" />

@@ -4,6 +4,7 @@ const Navbar = () => {
     const navbar = <>
         <NavLink to="/"><li><a>Home</a></li></NavLink>
         <NavLink to="/addCoffee"><li><a>Add Coffee</a></li></NavLink>
+        <NavLink to="/register"><li><a>Register</a></li></NavLink>
     </>
     return (
         <div className="bg-[url('/src/assets/images/more/15.jpg')] text-white object-cover bg-no-repeat">
@@ -26,7 +27,7 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-48 p-2 shadow text-black">
                             {
                                 navbar
                             }
@@ -37,7 +38,7 @@ const Navbar = () => {
                         <a className="btn btn-ghost text-xl text-white">Espresso Emporium</a></Link>
 
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-center hidden lg:flex z-10">
                     <ul className="menu menu-horizontal px-1">
                         {
                             navbar
@@ -59,7 +60,7 @@ const Navbar = () => {
                             <li>
                                 <a className="justify-between">
                                     Profile
-                                    <span className="badge">New</span>
+                                 
                                 </a>
                             </li>
                             <li><a>Settings</a></li>
